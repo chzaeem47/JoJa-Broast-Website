@@ -3,6 +3,20 @@
    Menu data, cart, checkout + geolocation, nav interactions
    ======================================================= */
 
+/* ---------------- LENIS SMOOTH SCROLLING ---------------- */
+if (typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+        duration: 1.2,
+        smoothWheel: true,
+    });
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    window.lenis = lenis;
+}
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ---------------- REAL FOOD IMAGES (Unsplash High-Quality Placeholders) ---------------- */

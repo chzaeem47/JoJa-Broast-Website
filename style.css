@@ -804,3 +804,37 @@ textarea:focus, input:focus { outline: 1px solid var(--primary-yellow); }
 @media (max-width: 480px) {
     .location-pill { display: none; }
 }
+
+/* Custom Slim Yellow Scrollbar - No Arrows, Transparent Track */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Forces the track background to be completely transparent */
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+/* Completely forces the browser arrow buttons to disappear */
+::-webkit-scrollbar-button {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+/* The slim yellow scroll handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-yellow);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e6b800;
+}
+
+/* Firefox Support */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-yellow) transparent;
+}
