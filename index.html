@@ -1,279 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joja Broast — The Taste You Remember</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joja Broast — The Taste You Remember</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ============ LOGO TAB ============ -->
-<div class="logo-tab">
-    <div class="logo-icon-wrapper">
-        <svg viewBox="0 0 100 100" class="logo-svg">
-            <path d="M40,20 Q60,20 60,40 Q60,50 50,55 Q65,60 65,80 Q65,100 40,100 C30,100 20,90 20,90 L30,75 C30,75 35,80 40,80 Q45,80 45,70 Q45,60 35,60 L25,60 L25,45 L35,45 Q45,45 45,35 Q45,25 35,25 L20,25 L20,10 L40,10 Z M60,40 C75,30 90,50 85,70 C75,65 70,75 70,75 C70,75 65,60 55,60" fill="#f5b32c"/>
-        </svg>
+    <!-- ============ LOGO TAB ============ -->
+    <div class="logo-tab">
+        <div class="logo-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="logo-svg">
+                <path
+                    d="M40,20 Q60,20 60,40 Q60,50 50,55 Q65,60 65,80 Q65,100 40,100 C30,100 20,90 20,90 L30,75 C30,75 35,80 40,80 Q45,80 45,70 Q45,60 35,60 L25,60 L25,45 L35,45 Q45,45 45,35 Q45,25 35,25 L20,25 L20,10 L40,10 Z M60,40 C75,30 90,50 85,70 C75,65 70,75 70,75 C70,75 65,60 55,60"
+                    fill="#f5b32c" />
+            </svg>
+        </div>
+        <div class="logo-text">
+            <h1 class="brand-name">JOJA</h1>
+            <h2 class="brand-sub">BROAST</h2>
+            <span class="brand-tag">THE TASTE YOU REMEMBER</span>
+        </div>
     </div>
-    <div class="logo-text">
-        <h1 class="brand-name">JOJA</h1>
-        <h2 class="brand-sub">BROAST</h2>
-        <span class="brand-tag">THE TASTE YOU REMEMBER</span>
-    </div>
-</div>
 
-<!-- ============ NAVIGATION ============ -->
-<header class="navbar">
-    <nav class="nav-links" id="navLinks">
-        <a href="#home" class="active" data-nav>Home</a>
+    <!-- ============ NAVIGATION ============ -->
+    <header class="navbar">
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="active" data-nav>Home</a>
+            <a href="#menu" data-nav>Menu</a>
+            <a href="#deals" data-nav>Deals</a>
+            <a href="#contact" data-nav>Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <div class="location-pill" id="locationPill" title="Delivering near you">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="locationPillText">Set location</span>
+            </div>
+            <div class="cart-container" id="cartOpenBtn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <button class="btn-primary" id="orderNowBtn">Order Now</button>
+        </div>
+
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobileNav">
+        <button id="mobileCloseBtn" class="mobile-close-btn" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#home" data-nav>Home</a>
         <a href="#menu" data-nav>Menu</a>
         <a href="#deals" data-nav>Deals</a>
+        <a href="#locations" data-nav>Locations</a>
         <a href="#contact" data-nav>Contact</a>
-    </nav>
 
-    <div class="nav-actions">
-        <div class="location-pill" id="locationPill" title="Delivering near you">
-            <i class="fa-solid fa-location-dot"></i>
-            <span id="locationPillText">Set location</span>
-        </div>
-        <div class="cart-container" id="cartOpenBtn">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-count" id="cartCount">0</span>
-        </div>
-        <button class="btn-primary" id="orderNowBtn">Order Now</button>
-    </div>
-
-    <div class="mobile-menu-btn" id="mobileMenuBtn">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-</header>
-
-<!-- Mobile nav drawer -->
-<div class="mobile-nav" id="mobileNav">
-    <a href="#home" data-nav>Home</a>
-    <a href="#menu" data-nav>Menu</a>
-    <a href="#deals" data-nav>Deals</a>
-    <a href="#locations" data-nav>Locations</a>
-    <a href="#contact" data-nav>Contact</a>
-
-    <div class="mobile-nav-actions">
-        <div class="mobile-location-pill" id="mobileLocationPill">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Set location</span>
-        </div>
-        <button class="mobile-cart-btn" id="mobileCartBtn">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Cart</span>
-            <span class="cart-count" id="mobileCartCount">0</span>
-        </button>
-        <button class="btn-primary full" id="mobileOrderBtn">Order Now</button>
-    </div>
-</div>
-
-<!-- ============ HERO / HOME ============ -->
-<section class="hero" id="home">
-    <div class="bg-watermark">JOJA<br>BROAST</div>
-
-    <div class="hero-content">
-        <div class="tagline-container">
-            <span class="tagline-text">THE TASTE YOU REMEMBER</span>
-        </div>
-
-        <div class="title-container">
-            <h1 class="title-white">CRUNCH</h1>
-            <h1 class="title-yellow">THAT HITS</h1>
-            <span class="title-script">Different!</span>
-        </div>
-
-        <p class="description">
-            Crispy outside juicy inside our broast is marinated with secret
-            spices and cooked to perfection every single time.
-        </p>
-
-        <div class="button-group">
-            <a href="#menu" class="btn-primary large">View Menu</a>
-        </div>
-    </div>
-
-    <div class="hero-image-container">
-        <img src="homeMain.png" alt="Joja Broast Bucket" class="main-bucket" onerror="this.src='https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?q=80&w=1200&auto=format&fit=crop'">
-        <div class="image-fade"></div>
-    </div>
-
-    <div class="social-sidebar">
-        <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://wa.me/923000000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-</section>
-
-<!-- ============ MARQUEE DEAL BANNER (fills the empty strip) ============ -->
-<section class="marquee-banner" id="promo">
-    <div class="marquee-track">
-        <span class="marquee-set">
-            <i class="fa-solid fa-fire"></i>&nbsp; CRUNCH THAT HITS DIFFERENT &nbsp;•&nbsp; JOJA BROAST &nbsp;•&nbsp;
-            FREE DELIVERY ON ORDERS ABOVE RS. 1000 &nbsp;•&nbsp; TRY OUR NEW ZINGER BURGER &nbsp;•&nbsp;
-            JOJA BROAST &nbsp;•&nbsp; 17 SECRET HERBS &amp; SPICES &nbsp;•&nbsp;
-        </span>
-        <span class="marquee-set" aria-hidden="true">
-            <i class="fa-solid fa-fire"></i>&nbsp; CRUNCH THAT HITS DIFFERENT &nbsp;•&nbsp; JOJA BROAST &nbsp;•&nbsp;
-            FREE DELIVERY ON ORDERS ABOVE RS. 1000 &nbsp;•&nbsp; TRY OUR NEW ZINGER BURGER &nbsp;•&nbsp;
-            JOJA BROAST &nbsp;•&nbsp; 17 SECRET HERBS &amp; SPICES &nbsp;•&nbsp;
-        </span>
-    </div>
-</section>
-
-<!-- ============ MENU ============ -->
-<section class="menu" id="menu">
-    <div class="section-head">
-        <span class="eyebrow">Fresh &amp; Fiery</span>
-        <h2>Our <span class="accent">Menu</span></h2>
-    </div>
-
-    <div class="menu-tabs" id="menuTabs">
-        <button class="menu-tab active" data-cat="broast">Broast</button>
-        <button class="menu-tab" data-cat="burgers">Burgers</button>
-        <button class="menu-tab" data-cat="sides">Fries &amp; Sides</button>
-        <button class="menu-tab" data-cat="drinks">Drinks</button>
-    </div>
-
-    <div class="menu-grid" id="menuGrid"></div>
-</section>
-
-<!-- ============ DEALS ============ -->
-<section class="deals" id="deals">
-    <div class="section-head">
-        <span class="eyebrow">Limited Time</span>
-        <h2>Today's <span class="accent">Deals</span></h2>
-    </div>
-    <div class="deals-grid" id="dealsGrid"></div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="contact" id="contact">
-    <div class="section-head">
-        <span class="eyebrow">Get In Touch</span>
-        <h2>Contact <span class="accent">Us</span></h2>
-    </div>
-
-    <div class="contact-grid">
-        <div class="contact-info">
-            <div class="contact-row">
-                <i class="fa-solid fa-phone"></i>
-                <div><h4>Call Us</h4><p>+92 300 0000000</p></div>
-            </div>
-            <div class="contact-row">
-                <i class="fa-solid fa-envelope"></i>
-                <div><h4>Email</h4><p>hello@jojabroast.com</p></div>
-            </div>
-            <div class="contact-row">
+        <div class="mobile-nav-actions">
+            <div class="mobile-location-pill" id="mobileLocationPill">
                 <i class="fa-solid fa-location-dot"></i>
-                <div><h4>Main Branch</h4><p>High Street Road, Sahiwal, Punjab, Pakistan</p></div>
+                <span>Set location</span>
             </div>
-            <div class="contact-row">
-                <i class="fa-solid fa-clock"></i>
-                <div><h4>Hours</h4><p>Every day — 12:00 PM to 1:00 AM</p></div>
-            </div>
-
-            <div class="contact-socials">
-                <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://wa.me/923000000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-        </div>
-
-        <div class="contact-map">
-            <iframe
-                src="https://www.google.com/maps?q=Sahiwal,Punjab,Pakistan&output=embed"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </div>
-</section>
-
-<footer class="site-footer">
-    <p>&copy; <span id="year"></span> Joja Broast. All rights reserved.</p>
-</footer>
-
-<!-- ============ CART DRAWER ============ -->
-<div class="overlay" id="overlay"></div>
-
-<aside class="cart-drawer" id="cartDrawer">
-    <div class="cart-header">
-        <h3><i class="fa-solid fa-cart-shopping"></i> Your Cart</h3>
-        <button class="close-btn" id="cartCloseBtn"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="cart-items" id="cartItems">
-        <div class="cart-empty" id="cartEmpty">
-            <i class="fa-solid fa-basket-shopping"></i>
-            <p>Your cart is empty. Add something crunchy!</p>
-        </div>
-    </div>
-    <div class="cart-footer">
-        <div class="cart-subtotal">
-            <span>Subtotal</span>
-            <span id="cartSubtotal">Rs. 0</span>
-        </div>
-        <button class="btn-primary large full" id="checkoutBtn">Proceed to Checkout</button>
-    </div>
-</aside>
-
-<!-- ============ CHECKOUT / LOCATION MODAL ============ -->
-<div class="modal-overlay" id="checkoutOverlay">
-    <div class="checkout-modal">
-        <button class="close-btn" id="checkoutCloseBtn"><i class="fa-solid fa-xmark"></i></button>
-
-        <div class="checkout-step" id="stepLocation">
-            <h3><i class="fa-solid fa-location-dot"></i> Delivery Location</h3>
-            <p class="step-sub">Tell us where to send the crunch.</p>
-
-            <button class="btn-primary full" id="useMyLocationBtn">
-                <i class="fa-solid fa-crosshairs"></i> Use My Current Location
+            <button class="mobile-cart-btn" id="mobileCartBtn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <span class="cart-count" id="mobileCartCount">0</span>
             </button>
-            <div class="location-status" id="locationStatus"></div>
-
-            <div class="map-preview" id="mapPreview"></div>
-
-            <label class="field-label">Delivery Address</label>
-            <textarea id="addressInput" placeholder="House #, street, area, city..." rows="3"></textarea>
-
-            <label class="field-label">Phone Number</label>
-            <input type="tel" id="phoneInput" placeholder="03XX-XXXXXXX">
-
-            <button class="btn-primary large full" id="toReviewBtn">Continue to Review</button>
-        </div>
-
-        <div class="checkout-step hidden" id="stepReview">
-            <h3><i class="fa-solid fa-receipt"></i> Review Your Order</h3>
-            <div class="review-items" id="reviewItems"></div>
-            <div class="review-address" id="reviewAddress"></div>
-            <div class="cart-subtotal">
-                <span>Total</span>
-                <span id="reviewTotal">Rs. 0</span>
-            </div>
-            <button class="btn-primary large full" id="placeOrderBtn">Place Order</button>
-            <button class="btn-secondary full" id="backToLocationBtn">Back</button>
-        </div>
-
-        <div class="checkout-step hidden" id="stepSuccess">
-            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
-            <h3>Order Placed!</h3>
-            <p class="step-sub" id="successMsg">Your food is on its way. Estimated delivery: 35-45 minutes.</p>
-            <button class="btn-primary large full" id="successCloseBtn">Done</button>
+            <button class="btn-primary full" id="mobileOrderBtn">Order Now</button>
         </div>
     </div>
-</div>
 
-<!-- ============ TOAST ============ -->
-<div class="toast" id="toast"></div>
+    <!-- ============ HERO / HOME ============ -->
+    <section class="hero" id="home">
+        <div class="bg-watermark">JOJA<br>BROAST</div>
 
-<script src="script.js"></script>
+        <div class="hero-content">
+            <div class="tagline-container">
+                <span class="tagline-text">THE TASTE YOU REMEMBER</span>
+            </div>
+
+            <div class="title-container">
+                <h1 class="title-white">CRUNCH</h1>
+                <h1 class="title-yellow">THAT HITS</h1>
+                <span class="title-script">Different!</span>
+            </div>
+
+            <p class="description">
+                Crispy outside juicy inside our broast is marinated with secret
+                spices and cooked to perfection every single time.
+            </p>
+
+            <div class="button-group">
+                <a href="#menu" class="btn-primary large">View Menu</a>
+            </div>
+        </div>
+
+        <div class="hero-image-container">
+            <img src="homeMain.png" alt="Joja Broast Bucket" class="main-bucket"
+                onerror="this.src='https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?q=80&w=1200&auto=format&fit=crop'">
+            <div class="image-fade"></div>
+        </div>
+
+        <div class="social-sidebar">
+            <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/923000000000" target="_blank" rel="noopener"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <!-- ============ MARQUEE DEAL BANNER (fills the empty strip) ============ -->
+    <section class="marquee-banner" id="promo">
+        <div class="marquee-track">
+            <span class="marquee-set">
+                <i class="fa-solid fa-fire"></i>&nbsp; CRUNCH THAT HITS DIFFERENT &nbsp;•&nbsp; JOJA BROAST
+                &nbsp;•&nbsp;
+                FREE DELIVERY ON ORDERS ABOVE RS. 1000 &nbsp;•&nbsp; TRY OUR NEW ZINGER BURGER &nbsp;•&nbsp;
+                JOJA BROAST &nbsp;•&nbsp; 17 SECRET HERBS &amp; SPICES &nbsp;•&nbsp;
+            </span>
+            <span class="marquee-set" aria-hidden="true">
+                <i class="fa-solid fa-fire"></i>&nbsp; CRUNCH THAT HITS DIFFERENT &nbsp;•&nbsp; JOJA BROAST
+                &nbsp;•&nbsp;
+                FREE DELIVERY ON ORDERS ABOVE RS. 1000 &nbsp;•&nbsp; TRY OUR NEW ZINGER BURGER &nbsp;•&nbsp;
+                JOJA BROAST &nbsp;•&nbsp; 17 SECRET HERBS &amp; SPICES &nbsp;•&nbsp;
+            </span>
+        </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section class="menu" id="menu">
+        <div class="section-head">
+            <span class="eyebrow">Fresh &amp; Fiery</span>
+            <h2>Our <span class="accent">Menu</span></h2>
+        </div>
+
+        <div class="menu-tabs" id="menuTabs">
+            <button class="menu-tab active" data-cat="broast">Broast</button>
+            <button class="menu-tab" data-cat="burgers">Burgers</button>
+            <button class="menu-tab" data-cat="sides">Fries &amp; Sides</button>
+            <button class="menu-tab" data-cat="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <!-- ============ DEALS ============ -->
+    <section class="deals" id="deals">
+        <div class="section-head">
+            <span class="eyebrow">Limited Time</span>
+            <h2>Today's <span class="accent">Deals</span></h2>
+        </div>
+        <div class="deals-grid" id="dealsGrid"></div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+        <div class="section-head">
+            <span class="eyebrow">Get In Touch</span>
+            <h2>Contact <span class="accent">Us</span></h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+92 300 0000000</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@jojabroast.com</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Main Branch</h4>
+                        <p>High Street Road, Sahiwal, Punjab, Pakistan</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>Every day — 12:00 PM to 1:00 AM</p>
+                    </div>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/923000000000" target="_blank" rel="noopener"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps?q=Sahiwal,Punjab,Pakistan&output=embed" width="100%"
+                    height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Joja Broast. All rights reserved.</p>
+    </footer>
+
+    <!-- ============ CART DRAWER ============ -->
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Your Cart</h3>
+            <button class="close-btn" id="cartCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your cart is empty. Add something crunchy!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">Rs. 0</span>
+            </div>
+            <button class="btn-primary large full" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- ============ CHECKOUT / LOCATION MODAL ============ -->
+    <div class="modal-overlay" id="checkoutOverlay">
+        <div class="checkout-modal">
+            <button class="close-btn" id="checkoutCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+
+            <div class="checkout-step" id="stepLocation">
+                <h3><i class="fa-solid fa-location-dot"></i> Delivery Location</h3>
+                <p class="step-sub">Tell us where to send the crunch.</p>
+
+                <button class="btn-primary full" id="useMyLocationBtn">
+                    <i class="fa-solid fa-crosshairs"></i> Use My Current Location
+                </button>
+                <div class="location-status" id="locationStatus"></div>
+
+                <div class="map-preview" id="mapPreview"></div>
+
+                <label class="field-label">Delivery Address</label>
+                <textarea id="addressInput" placeholder="House #, street, area, city..." rows="3"></textarea>
+
+                <label class="field-label">Phone Number</label>
+                <input type="tel" id="phoneInput" placeholder="03XX-XXXXXXX">
+
+                <button class="btn-primary large full" id="toReviewBtn">Continue to Review</button>
+            </div>
+
+            <div class="checkout-step hidden" id="stepReview">
+                <h3><i class="fa-solid fa-receipt"></i> Review Your Order</h3>
+                <div class="review-items" id="reviewItems"></div>
+                <div class="review-address" id="reviewAddress"></div>
+                <div class="cart-subtotal">
+                    <span>Total</span>
+                    <span id="reviewTotal">Rs. 0</span>
+                </div>
+                <button class="btn-primary large full" id="placeOrderBtn">Place Order</button>
+                <button class="btn-secondary full" id="backToLocationBtn">Back</button>
+            </div>
+
+            <div class="checkout-step hidden" id="stepSuccess">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <h3>Order Placed!</h3>
+                <p class="step-sub" id="successMsg">Your food is on its way. Estimated delivery: 35-45 minutes.</p>
+                <button class="btn-primary large full" id="successCloseBtn">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ TOAST ============ -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
